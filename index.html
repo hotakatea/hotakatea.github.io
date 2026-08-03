@@ -9,9 +9,25 @@
     <meta name="theme-color" content="#3472a5">
     <meta property="og:url" content="https://hotakatea.github.io/home">
     <meta name="twitter:card" content="summary_large_image">
-    <script>
-      window.location.href = "https://hotakatea.github.io/home"
-    </script>
+<script>
+const redirect = new URLSearchParams(window.location.search).get("r");
+let redirectTo = "https://hotakatea.github.io/home";
+
+if (redirect === "youtube")
+redirectTo = "https://youtube.com/@hotakatea";
+else if (redirect === "discord")
+redirectTo = "https://discord.com/invite/gMwK8XSH7F";
+else if (redirect === "twitter")
+redirectTo = "https://twitter.com/hotakatea";
+else if (redirect === "github") 
+redirectTo = "https://github.com/hotakatea";
+else if (redirect === "mail")
+redirectTo = "mailto:hotakatea@gmail.com";
+else redirectTo = "https://hotakatea.github.io/home";
+
+window.location.href = redirectTo;
+
+</script>
     <title>Redirecting...</title>
 </head>
 <body>
